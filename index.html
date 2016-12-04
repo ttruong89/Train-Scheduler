@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Train Scheduler</title>
+		<!-- Bootstrap -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	    <!-- Firebase Reference -->
+	    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+	    <!-- Moment.js Reference -->
+	    <!-- <script src="http://momentjs.com/downloads/moment.js"></script>   -->
+	    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	</head>
+	
+	<body>
+	
+		<div class="container">
+
+			<!--Jumbotron Title-->
+			<div class="jumbotron">
+				<h1 class="text-center">Train Scheduler</h1>
+				<h3 class="text-center">Always on Time.</h3>
+			</div>
+
+			<!--Current Train Schedule Row-->
+			<div class="row">
+				<div class="col-lg-12">
+					<!--Current Train Schedule Panel-->
+					<div class="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
+						</div>
+						<div class="panel-body">
+							<table class="table table-hover" id='currentTrainSchedule'>
+								<thead>
+							  		<tr>
+							   			<th>Train Name</th>
+							   			<th>Destination</th>
+							   			<th>Frequency (min)</th>
+							   			<th>Next Arrival</th>
+							   			<th>Minutes Away</th>
+							  		</tr>	
+								</thead>
+								<tbody>
+								<!--This is where the appended train info will go-->
+								</tbody>	
+							</table>
+						</div>
+					</div>
+				</div>
+			</div><!--Close first row-->
+
+			<!--Add Train Form-->
+			<div class="row">
+				<div class="col-lg-12">
+					<!--Add Train Panel-->
+					<div class="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title"><strong>Add Train</strong>
+						</div>
+						<div class="panel-body">
+							<form>
+								<div class="form-group">
+								  <label for="train-name-input">Train Name</label>
+								  <input class="form-control input" id="train-name-input" type="text">
+								</div>
+								<div class="form-group">
+								  <label for="destination-input">Destination</label>
+								  <input class="form-control input" id="destination-input" type="text">
+								</div>
+								<div class="form-group">
+								  <label for="first-train-time-input">First Train Time (HH:mm-military time)</label>
+								  <input class="form-control input" id="first-train-time-input" type="text">
+								</div>
+								<div class="form-group">
+								  <label for="frequency-input">Frequency (min)</label>
+								  <input class="form-control input" id="frequency-input" type="text">
+								</div>
+								<button class="btn btn-danger" id="add-train-btn" type="submit">Submit</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div><!--Close second row-->
+
+		</div><!--Close .container-->
+
+		<!--Javascript-->
+		<script src="assets/javascript/logic.js"></script>
+
+	</body>
+
+</html>

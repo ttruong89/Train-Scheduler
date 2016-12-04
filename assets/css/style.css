@@ -1,0 +1,23 @@
+body {
+	background: url("../images/background.jpg");
+}
+
+.container {
+	opacity: 0.9;
+}
+
+.jumbotron {
+	background: #d8c9e2;
+}
+
+.text-center {
+	font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+}
+
+.panel-heading {
+	background: #a18caf;
+}
+
+.panel-title {
+	color: #000000;
+}
